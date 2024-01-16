@@ -33,3 +33,6 @@ az role assignment create \
 echo "AZURE_CLIENT_ID: $applicationRegistrationAppId"
 echo "AZURE_TENANT_ID: $(az account show --query tenantId --output tsv)"
 echo "AZURE_SUBSCRIPTION_ID: $(az account show --query id --output tsv)"
+
+#Clean up
+az group delete --name ToyWebsiteTest --y
